@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Path Recommendations</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen">
+  <div class="text-center">
+    <div class="flex justify-center mb-8">
+      <div class="w-16 h-16 rounded-full bg-yellow-500 animate-pulse"></div>
+    </div>
+    <h1 class="text-3xl font-bold mb-8">Finding learning path recommendations for you based on <br>your responses</h1>
+    
+  </div>
+
+  <script>
+    
+ setTimeout(() => {
+      const selectedPath = localStorage.getItem('selectedPath');
+      if (selectedPath) {
+        window.location.href = `started.html`;
+      } else {
+        window.location.href = 'started.html';
+      }
+    }, 3000);
+    
+  </script>
+</body>
+</html>

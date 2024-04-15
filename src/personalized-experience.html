@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalized Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-3xl font-bold ">Which are you most interested in?</h1>
+    <p class="mt-8">Choose just one. This will help us get you started (but won't limit your experience).</p>
+    <div class="w-full max-w-md">
+      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 space-y-4">
+        <form id="optionForm">
+          <div class="mb-4 border border-gray-500 shadow-xl w-50 h-10 items-center justify-between  hover:border-yellow-500 hover:shadow-amber-400">
+            <img src="https://www.emojiall.com/images/240/facebook/1f4c8.png" class="w-9 h-9 float-left mr-4" >
+            <input class=" hidden form-radio mr-2" id="option1" type="radio" name="option" value="student" />
+            <label class="text-gray-700" for="option1">Learning specific skills to advance my career</label>
+          </div>
+          <div class="mb-4 border border-gray-500 shadow-xl w-50 h-10 hover:border-yellow-500">
+            <img src="https://github.com/neogaialab.png" class="w-9 h-9 float-left mr-4" >
+            <input class=" hidden form-radio mr-2" id="option2" type="radio" name="option" value="professional" />
+            <label class="text-gray-700" for="option2">Exploring new topics I'm interested in</label>
+          </div>
+          <div class="mb-4 border border-gray-500 shadow-xl w-50 h-10 hover:border-yellow-500">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVCQ9cpaau_AsJ8SItIYeymtB67XLBye8Z8vYF1AHqEnyzmKP2Ej7ONnETfyWDzxk6y7w&usqp=CAU" class="w-9 h-9 float-left mr-4" >
+            <input class=" hidden form-radio mr-2" id="option3" type="radio" name="option" value="parent" />
+            <label class="text-gray-700" for="option3">Refreshing my math foundations</label>
+          </div>
+          <div class="mb-4 border border-gray-500 shadow-xl w-50 h-10 hover:border-yellow-500">
+            <img src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_741,h_486/https://s22908.pcdn.co/wp-content/uploads/2021/08/niche-streaming-services-741x486.jpg" class="w-9 h-9 float-left mr-4" >
+            <input class=" hidden form-radio mr-2" id="option4" type="radio" name="option" value="lifelong-learner" />
+            <label class="text-gray-700" for="option4">Exercising my brain to stay sharp</label>
+          </div>
+          <div class="mb-4 border border-gray-500 shadow-xl w-50 h-10 hover:border-yellow-500">
+            <img src="https://media.istockphoto.com/id/1414451080/vector/smile-eyes-look-away-emoji-a-sticker-for-a-chat-message.jpg?s=612x612&w=0&k=20&c=CkfS4-p14xKZXtEIXi_U2vrlRRFR7QrVazWr8eYDTqA=" class="w-9 h-9 float-left mr-4" >
+            <input class=" hidden form-radio mr-2" id="option5" type="radio" name="option" value="teacher" />
+            <label class="text-gray-700" for="option5">Something else</label>
+          </div>
+        </form>
+      </div>
+      <div class="flex justify-center">
+        <button class="bg-black hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Continue
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const continueButton = document.querySelector('button');
+    const optionForm = document.getElementById('optionForm');
+
+    continueButton.addEventListener('click', () => {
+      console.log('Continue button clicked');
+      const selectedOption = document.querySelector('input[name="option"]:checked');
+      if (selectedOption) {
+        console.log('Option selected:', selectedOption.value);
+        const selectedValue = selectedOption.value;
+        localStorage.setItem('selectedOption', selectedValue);
+        console.log('Selected option stored in local storage:', selectedValue);
+        window.location.href = 'section.html';
+      } else {
+        alert('Please select an option.');
+      }
+    });
+  </script>
+</body>
+</html>

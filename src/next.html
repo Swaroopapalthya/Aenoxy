@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Comfort Level</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="flex flex-col items-center justify-center h-screen bg-gray-100 ">
+    <h1 class="text-3xl font-bold mb-4">What is your math comfort level?</h1>
+    <p class="text-gray-600 mb-8">Choose the highest level you feel confident in — you can always adjust later.</p>
+
+    <div class="grid grid-cols-4 gap-4 ">
+      <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer  border hover:border-yellow-300">
+        <input class=" hidden form-radio mr-2" id="option1" type="radio" name="option" value="student" />
+        <label for="option1"><b class="text-xl  semi-bold mb-2"></b>Arithmetic</b> 
+          <p class="text-gray-500 mb-4">Introductory</p>
+          <b class="text-2xl">5 × 1/2 = ?</b>
+          </label>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer option  border hover:border-yellow-300">
+        <input class=" hidden form-radio mr-2" id="option2" type="radio" name="option" value="student" />
+        <label for="option2">
+        <h3 class="text-xl font-semibold mb-2">Basic Algebra</h3>
+        <p class="text-gray-500 mb-4">Foundational</p>
+        <div class="text-2xl font-bold">3x + 5 = 4</div>
+      </label>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer option  border hover:border-yellow-300">
+        <input class=" hidden form-radio mr-2" id="option3" type="radio" name="option" value="student" />
+        <label for="option3">
+        <h3 class="text-xl font-semibold mb-2">Intermediate Algebra</h3>
+        <p class="text-gray-500 mb-4">Intermediate</p>
+        <div class="text-2xl font-bold">x = (-b ± √(b^2 - 4ac)) / 2a</div>
+      </label>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 cursor-pointer option  border hover:border-yellow-300">
+        <input class=" hidden form-radio mr-2 hover:border-orange-500 " id="option4" type="radio" name="option" value="student" />
+        <label for="option4">
+        <div class="hover:border-orange-500 hover:bg-amber-200">
+        <h3 class="text-xl font-semibold mb-2">Calculus</h3>
+        <p class="text-gray-500 mb-4">Advanced</p>
+        <div class="text-2xl font-bold">∫x^2 dx = ?</div>
+        </label>
+      </div>
+      </div>
+    </div>
+
+    <button class="bg-black  text-white hover:bg-yellow-500 px-4 py-2 rounded-md mt-8" id="continue-btn">Continue</button>
+  </div>
+
+  <script>
+    const continueButton = document.querySelector('button');
+    const optionForm = document.getElementById('optionForm');
+
+    continueButton.addEventListener('click', () => {
+      console.log('Continue button clicked');
+      const selectedOption = document.querySelector('input[name="option"]:checked');
+      if (selectedOption) {
+        console.log('Option selected:', selectedOption.value);
+        const selectedValue = selectedOption.value;
+        localStorage.setItem('selectedOption', selectedValue);
+        console.log('Selected option stored in local storage:', selectedValue);
+        window.location.href = 'next-next.html';
+      } else {
+        alert('Please select an option.');
+      }
+    });
+  </script>
+  
+
+</body>
+</html>

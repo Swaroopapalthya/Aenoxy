@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen">
+  
+    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkawqSk0dy4w9pP49TJfNt4WAqGb2UXX047k_zYEMSLOMcZQlEmV5QOS-qoEuRg_k3Q2U&usqp=CAU" alt="ratings"  class="w-52 h-72 mb-32 float-left bg-white" >
+    </div>
+    <div class="text-center">
+      <h1 class="text-lg md:text-xl font-bold mb-2 md:mb-4">You're in the right place</h1>
+      <div>
+    <p class="text-sm md:text-base text-gray-700 mb-2 md:mb-4">"Brilliant gets you hands-on to help improve your professional
+       skills and knowledge. You'll interact with concepts and solve 
+       fun problems in math, science, and computer science.."</p>
+    <button class="bg-black text-white px-6 py-3 mt-4 rounded-md hover:bg-yellow-400 focus:outline-none justify-center" id="continue-btn">Continue</button>
+  </div>
+
+  <script>
+    const continueButton = document.getElementById('continue-btn');
+
+    continueButton.addEventListener('click', () => {
+      window.location.href = 'next.html';
+    });
+  </script>
+</body>
+</html>

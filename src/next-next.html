@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen">
+  <div class="text-center">
+    <h1 class="text-2xl font-bold mt-16">You're on your way!</h1>
+    <div class="flex justify-center mb-8 mt-8">
+      <div class="mr-2">
+        <svg class="w-6 h-6 fill-current text-yellow-500" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+        </svg>
+      </div>
+      <div class="mr-2">
+        <svg class="w-6 h-6 fill-current text-yellow-500" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+        </svg>
+      </div>
+      <div class="mr-2">
+        <svg class="w-6 h-6 fill-current text-yellow-500" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+        </svg>
+      </div>
+      <div class="mr-2">
+        <svg class="w-6 h-6 fill-current text-yellow-500" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+        </svg>
+      </div>
+      <div class="mr-2">
+        <svg class="w-6 h-6 fill-current text-yellow-500" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+        </svg>
+      </div>
+    </div>
+    <div>
+    <image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeo8KcyNq4z3lxmcxc8sbxVsiTaIlxXqOcZA&s" alt="ratings"  class="w-44 h-72 mb-8 float-left bg-white" >
+    </div>
+    <p class="text-gray-700 mb-8 mt-16 ">"Through its engaging and well-structured courses, Brilliant has taught me mathematical concepts that I previously struggled to understand. I now feel confident approaching both technical job interviews and real world problem solving situations."</p>
+    <p class="text-gray-700 mb-8">— Jacob S.</p>
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50" id="continue-btn">Continue</button>
+  </div>
+
+  <script>
+    const continueButton = document.getElementById('continue-btn');
+
+    continueButton.addEventListener('click', () => {
+      window.location.href = 'response.html';
+    });
+  </script>
+</body>
+</html>
